@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #24223E;
+
+
+  /* blue colors */
+  --light-blue: #E5F4FF;
+  /* --base-blue: #E5F4FF; */
+  --rich-blue: #0096FF;
+
+  /* border colors */
+  --light-border: #D9DBE9;
+  /* --base-border: #D9DBE9; */
+  --rich-border: #D5D7DA;
+  
+  /* green colors */
+  /* --light-green: #D9DBE9; */
+  /* --base-border: #D9DBE9; */
+  --rich-green: #00C950;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-light-blue: var(--light-blue);
+  --color-rich-blue: var(--rich-blue);
+  
+  --color-light-border: var(--light-border);
+  --color-rich-border: var(--rich-border);
+
+  --color-rich-green: var(--rich-green);
+  
+  --font-jakarta: var(--font-jakarta);
+  --font-cairo: var(--font-cairo);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #24223E;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+
+
+/* ========================================================================== */
+/* ====================== Wrapper Classes ======================= */
+/* ========================================================================== */
+.wrapper {
+	@apply  max-w-[358px] md:max-w-[680px] xl:max-w-[1280px] 2xl:max-w-[1440px] !w-full !rounded-lg;
+}
