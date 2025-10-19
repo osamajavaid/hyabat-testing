@@ -1,5 +1,11 @@
 {
   "HomePage": {
-    "title": "Hello world!"
+    "zatca-desc": "ZATCA Phase 2 compliance ready",
+    "hero-title": "Build smarter with integrated ERP",
+    "hero-desc": "All-in-one construction ERP that scales with your business. Project management to compliance, all in one platform.",
+    "trusted-contractor-desc": "Trusted by Leading Contractors and Authorities in Saudi Arabia"
+  },
+  "shared": {
+    "free-trial-button": "Start your free trial"
   }
 }

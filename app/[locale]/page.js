@@ -1,35 +1,78 @@
+import ErpFeatures from "@/components/pages/home/erp-features";
+import FAQSection from "@/components/pages/home/FAQs";
+import Hero from "@/components/pages/home/hero";
+import Blue from "@/components/wrappers/blue";
+import TrustedContractors from "@/components/shared/trusted-contractor";
 import { PrimaryButton } from "@/components/ui/button";
+import Container from "@/components/wrappers/container";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-// import { getTranslations } from "next-intl/server";
+import { Fragment } from "react";
 
 export default function Home() {
     const t = useTranslations("HomePage"); // for non-async functions
-    // const t = await getTranslations("HomePage"); // for async functions
-
+    // console.log("t: ", t("free-trail-button"))
     return (
-        <main className="bg-light-blue grid place-items-center">
-            <div className="wrapper grid grid-cols-2 items-center py-20">
-                <section className="flex flex-col gap-y-5 max-w-[605px] ">
-                    <div className="flex items-center gap-x-4 bg-white rtl:pl-2.5 rtl:pr-5 ltr:pl-4 ltr:pr-2.5 rounded-full w-[342px] h-[42px] border border-light-border">
-                        <div className="grid grid-cols-[10px_1fr] items-center gap-x-3">
-                            <span className="bg-rich-green w-3 h-3 rounded-full"></span>
-                            <span>ZATCA Phase 2 compliance ready</span>
+        <Fragment>
+            <Hero />
+            <TrustedContractors />
+            <Container parentclassName="bg-light-blue" childclassName="py-20 grid place-items-center text-center">
+                <div className="grid place-items-center gap-y-1 max-w-[462px] pb-8">
+                    <h1 className="text-[42px] font-extrabold">Average Client <Blue>Results</Blue></h1>
+                    <p className="text-xl font-medium">Maximize productivity, minimize costs.</p>
+                </div>
+                {/* <!-- Cards Grid --> */}
+                <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-6 mb-12">
+                    {/* <!-- Card 1 --> */}
+                    <div className="bg-white grid place-items-center rounded-xl gap-y-2.5 shadow-[4px_4px_3px] shadow-green px-6 py-10 border border-light-border ">
+                        <div className="flex items-center gap-x-2">
+                            <h3 className="text-4xl font-semibold text-rich-blue">75%</h3>
+                            <Image src={"/home/svgs/go-green.svg"} height={26} width={24} alt="hysabat go green" />
                         </div>
-                        <Image src="/home/svgs/forward-sm.svg" width={18} height={18} alt="forward hysabat" />
+                        <h4 className="text-[22px] font-semibold">Faster Financial Reports</h4>
+                        <p className="w-[340px] text-lg font-medium">Speed up financial reporting with HYSABAT for faster insights.</p>
                     </div>
-                    <div className="flex flex-col gap-y-5">
-                        <h1 className="text-[64px] font-semibold leading-20">Build smarter <br /> with integrated ERP</h1>
-                        <p className="text-xl">All-in-one construction ERP that scales with your business.
-                            Project management to compliance, all in one platform.</p>
+
+                    {/* <!-- Card 2 --> */}
+                    <div className="bg-white grid place-items-center rounded-xl gap-y-2.5 shadow-[4px_4px_3px] shadow-purple p-6 border border-light-border ">
+                        <div className="flex items-center gap-x-2">
+                            <h3 className="text-4xl font-semibold text-rich-blue">2X</h3>
+                            <Image src={"/home/svgs/go-green.svg"} height={26} width={24} alt="hysabat go green" />
+                        </div>
+                        <h4 className="text-[22px] font-semibold">Increase in Productivity</h4>
+                        <p className="w-[340px] text-lg font-medium">Helping businesses double transactions while ensuring accuracy.</p>
                     </div>
-                    <PrimaryButton text={"Start your free trial"} />
+
+                    {/* <!-- Card 3 --> */}
+                    <div className="bg-white grid place-items-center rounded-xl gap-y-2.5 shadow-[4px_4px_3px] shadow-yellow p-6 border border-light-border">
+                        <div className="flex items-center gap-x-2">
+                            <h3 className="text-4xl font-semibold text-rich-blue">45%</h3>
+                            <Image src={"/home/svgs/go-green.svg"} height={26} width={24} alt="hysabat go green" />
+                        </div>
+                        <h4 className="text-[22px] font-semibold">Automated Processes</h4>
+                        <p className="w-[340px] text-lg font-medium">Streamlined workflows enhance efficiency and reduce manual tasks.</p>
+                    </div>
+                </div>
+            </Container>
+            <div className="h-96 bg-black/10"></div>
+            <ErpFeatures />
+            <FAQSection />
+
+            <Container parentclassName='bg-gradient-to-t from-light-blue to-white' childclassName="py-32">
+                <section className="relative overflow-hidden border border-light-border w-full bg-white rounded-2xl py-20 px-10">
+                    <main>
+                        <Image src={"/shared/logo-with-label.svg"} width={151} height={42} alt="hysabat logo with label" />
+                        <section className="max-w-[470px] flex flex-col gap-y-3 pt-4">
+                            <h1 className="text-[42px] font-bold">Start Your Journey with <br />
+                                <Blue>HYSABAT</Blue> Today</h1>
+                            <span className="text-lg font-medium">Join 50+ construction companies in Saudi Arabia that
+                                trust Hysabat to manage operations.</span>
+                            <PrimaryButton text="Get started. It’s FREE" />
+                        </section>
+                    </main>
+                    <Image className="absolute right-0 bottom-0" src={"/home/svgs/start-your-journey.svg"} width={802} height={300} alt="hysabat logo with label" />
                 </section>
-                <sectio className="flex items-center gap-x-4">
-                    <Image src={"/home/images/banner-img1.png"} width={286} height={539} alt="hysabat dashboard" />
-                    <Image src={"/home/images/banner-img2.png"} width={351} height={540} alt="hysabat dashboard" />
-                </sectio>
-            </div>
-        </main>
+            </Container>
+        </Fragment>
     );
 }

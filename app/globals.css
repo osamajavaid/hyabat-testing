@@ -4,7 +4,6 @@
   --background: #ffffff;
   --foreground: #24223E;
 
-
   /* blue colors */
   --light-blue: #E5F4FF;
   /* --base-blue: #E5F4FF; */
@@ -14,11 +13,20 @@
   --light-border: #D9DBE9;
   /* --base-border: #D9DBE9; */
   --rich-border: #D5D7DA;
-  
+
   /* green colors */
   /* --light-green: #D9DBE9; */
   /* --base-border: #D9DBE9; */
   --rich-green: #00C950;
+  
+  /* plane colors */
+  --green: #0ccdbd;
+  --purple: #7d86ff;
+  --yellow: #fdef9a;
+ 
+  /* text colors */
+  --gray-text: #535862;
+  
 }
 
 @theme inline {
@@ -32,6 +40,12 @@
   --color-rich-border: var(--rich-border);
 
   --color-rich-green: var(--rich-green);
+
+  --color-green: var(--green);
+  --color-purple: var(--purple);
+  --color-yellow: var(--yellow);
+  
+  --color-gray-text: var(--gray-text);
   
   --font-jakarta: var(--font-jakarta);
   --font-cairo: var(--font-cairo);
@@ -55,5 +69,12 @@ body {
 /* ====================== Wrapper Classes ======================= */
 /* ========================================================================== */
 .wrapper {
-	@apply  max-w-[358px] md:max-w-[680px] xl:max-w-[1280px] 2xl:max-w-[1440px] !w-full !rounded-lg;
+  @apply  max-w-[358px] md:max-w-[680px] xl:max-w-[1280px] 2xl:max-w-[1440px] !w-full !rounded-lg;
 }
+
+/* ========================================================================== */
+/* ====================== Wrapper Classes ======================= */
+.hero {
+  @apply  text-center flex flex-col items-center justify-center gap-y-4 bg-light-blue h-[420px];
+}
+/* ========================================================================== */
