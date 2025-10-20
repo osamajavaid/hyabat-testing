@@ -27,12 +27,12 @@ export const metadata = {
         "billing system",
         "business automation",
     ],
-    metadataBase: new URL("https://jmmtech.net/en"), // replace with your real domain
+    metadataBase: new URL("http://hysabat2.vercel.app/en"), // replace with your real domain
     openGraph: {
         title: "Hysabat - Smart Construction ERP System",
         description:
             "Manage your construction business smarter with Hysabat. From projects to compliance, all in one ERP platform built for Saudi contractors.",
-        url: "https://jmmtech.net/en",
+        url: "http://hysabat2.vercel.app/en",
         siteName: "Hysabat",
         images: [
             {
