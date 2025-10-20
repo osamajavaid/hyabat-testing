@@ -36,7 +36,7 @@ export const metadata = {
         siteName: "Hysabat",
         images: [
             {
-                url: "/erp-features.jpeg", // place in /public
+                url: "https://hysabat2.vercel.app/erp-features.jpeg", // place in /public
                 width: 1200,
                 height: 630,
                 alt: "Hysabat - Construction ERP Dashboard",
@@ -50,15 +50,15 @@ export const metadata = {
         title: "Hysabat - Smart Construction ERP System",
         description:
             "All-in-one ERP platform for construction, payroll, and compliance in Saudi Arabia.",
-        images: ["/erp-features.jpeg"], // same as OpenGraph
+        images: ["https://hysabat2.vercel.app/erp-features.jpeg"], // same as OpenGraph
         // creator: "@hysabat", // optional, replace with your handle
     },
     icons: {
-        icon: "/hysabat-icon.svg",
+        icon: "https://hysabat2.vercel.app/hysabat-icon.svg",
         shortcut: "/hysabat-icon.svg",
         apple: "/hysabat-icon.svg",
     },
-    manifest: "/site.webmanifest",
+    manifest: "https://hysabat2.vercel.app/site.webmanifest",
     themeColor: "#0096FF", // adjust to your brand palette
 };
 
