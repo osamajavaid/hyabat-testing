@@ -14,7 +14,7 @@ export default function Home() {
     // console.log("t: ", t("free-trail-button"))
     return (
         <Fragment>
-            <Hero />
+            {/* <Hero /> */}
             <TrustedContractors />
             <Container parentclassName="bg-light-blue" childclassName="py-20 grid place-items-center text-center">
                 <div className="grid place-items-center gap-y-1 max-w-[462px] pb-8">

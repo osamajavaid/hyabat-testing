@@ -62,21 +62,21 @@ export const metadata = {
     themeColor: "#0096FF", // adjust to your brand palette
 };
 
-export default async function LocaleLayout({ children, params }) {
+export default function LocaleLayout({ children, params }) {
     // Ensure that the incoming `locale` is valid
-    const { locale } = await params;
-    if (!hasLocale(routing.locales, locale)) {
-        notFound();
-    }
+    // const { locale } = await params;
+    // if (!hasLocale(routing.locales, locale)) {
+    //     notFound();
+    // }
 
     return (
-        <NextIntlClientProvider lang={locale}>
-            <div className="ltr:font-jakarta rtl:font-cairo" dir={locale === 'ar' ? 'rtl' : 'ltr'} lang={locale}>
-                <NewVersionBanner />
-                <Header />
-                {children}
-                <Footer />
-            </div>
-        </NextIntlClientProvider>
+        // <NextIntlClientProvider lang={locale}>
+        <div>
+            <NewVersionBanner />
+            <Header />
+            {children}
+            <Footer />
+        </div>
+        // </NextIntlClientProvider>
     );
 }
